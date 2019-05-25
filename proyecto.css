@@ -1,0 +1,398 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FFFAF0;
+}
+header{
+    margin: 0;
+    padding: 0;
+}
+
+aside{
+    width: 100%;
+    background: #F28634;
+
+}
+
+#carrusel{
+    padding-top: 0;
+    margin-top: 0;
+    /*width: 75%;*/
+    height:400px;
+    margin-right: auto;
+    background-size: 100% 450px;
+    animation: Carrusel 20s infinite;
+}
+
+#poster{
+    background-image: url("poster1.png");
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 350px;
+
+}
+
+#name{
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#botones{
+    display: inline;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+#log{
+    float: right;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+
+#out{
+    float: right;
+    padding-top: 50px;
+    padding-right: 30px;
+}
+
+#botones img{
+    padding-top: 50px;
+}
+
+ #barra{
+
+     padding-left: 20px;
+     background: rgba(244,164,96,3);
+     /*margin-left: 500px ;*/
+
+     /*width: 23.45%;*/
+     height: 400px;
+     /*float: right;*/
+     text-align: center;
+
+     color: #1c0d02;
+
+ }
+
+#btn-menu{
+    display: none;
+    background-color: #FFFAF0;
+}
+
+aside label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #FFFAF0;
+}
+aside label:hover{
+    cursor: pointer;
+    background: rgba(244,164,96,3);
+}
+
+.menu{
+margin-right: auto;
+    margin-left: auto;
+}
+
+#divmenu{
+    margin-left: auto;
+    margin-right: auto;
+    width: 585px;
+}
+
+.menu ul{
+    margin-top: 0;
+    /*margin-left: 28%;*/
+    margin-left: auto;
+    margin-right: auto;
+    alignment: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #FFFAF0;
+    text-decoration: none;
+
+}
+
+.menu li:hover{
+    background: rgba(244,164,96,3);
+}
+
+@media (max-width: 500px) {
+    aside label{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        background: rgba(255,250,240,5);
+        width: 70%;
+        margin-left: -250%;
+        transition:all 0.5s;
+    }
+
+    .menu li a{
+        color: #000000;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        margin-left: 0;
+    }
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+}
+
+@keyframes Carrusel {
+    0%,35%{
+        background-image: url("imagen11.jpg");
+
+    }
+    35%,50%{
+        background-image: url("imagen2.jpg");
+
+    }
+    50%,70%{
+
+        background-image: url("imagen3.jpg");
+
+    }
+    70%, 90%{
+        background-image: url("imagen4.jpg");
+
+    }
+    90%,100%{
+
+        background-image: url("imagen8.jpg");
+    }
+
+}
+
+#centro{
+    /*height: 1650px;*/
+    background-color: #FFFAF0;
+}
+#tablearticles{
+    margin: 100px;
+    text-align: center;
+}
+
+#donitas{
+    /*height: 750px;*/
+    margin-bottom: 80px;
+    background-color:#FFFAF0 ;
+}
+
+#tabladonitas{
+    padding-left:  200px;
+    padding-right: 135px;
+}
+
+#noticias {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background-color: #FFFAF0;
+    /*height: 1750px;*/
+}
+
+#tabladenoticias{
+  padding: 100px;
+}
+
+#tabladeinformacion{
+    background-color: #FFFAF0;
+    /*height: 2000px;*/
+}
+
+#pie{
+    background-color: #1c0d02;
+    /*height: 300px;*/
+    width: 100%;
+
+}
+
+#productos{
+    /*height: 350px;*/
+    margin-bottom: 70px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: #FFFAF0;
+}
+
+#imagenes img{
+    padding-right: 20px;
+}
+
+#pandulce{
+    padding-left: 0px;
+    height: 1800px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+#pandulce tr{
+    padding: 0;
+}
+#pandulce td{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#reposteria{
+    width: 100%;
+    background-color: #FFFAF0;
+    height: 1400px;
+    text-align: center;
+}
+
+#panblanco{
+    text-align: center;
+    background-color: #FFFAF0;
+    height: 950px;
+    width: 100%;
+}
+
+#footbtn{
+    display: inline;
+    text-align: center;
+    margin-top: 10px;
+}
+#footimg{
+    background-image: url("foot.png");
+    height: 50px;
+    width: 100%;
+    background-size: 1920px 50px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+
+#pie article{
+    color: #FFFAF0;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#pie table{
+    color: #FFFAF0;
+}
+
+#pedidostabla{
+    color: #F4A460;
+    font-family: 'Times New Roman';
+    /*background: #f69d3c;*/
+    text-align: center;
+
+}
+
+#pedidostabla div{
+    border: 1px solid #F4A460;
+}
+
+#pedidosImagen{
+    height: 200px;
+    background-image: url("galleteria_panaderia.jpg");
+    background-size: 100% 100%;
+}
+
+#facturatabla{
+    color: #F4A460;
+    font-family: 'Times New Roman';
+    /*background: #f69d3c;*/
+    text-align: center;
+}
+
+#facturatabla div{
+    border: 1px solid #F4A460;
+}
+
+#botonesPedidos div{
+    color: #FFFAF0;
+    font-family: 'Times New Roman';
+    font-size: 17px;
+    font-style: inherit;
+
+
+}
+
+#botonPedir{
+    background-color: rgb(244,164,96);
+    border-color: #f69d3c;
+}
+#botonPedir:hover{
+    background-color: rgba(246,157,60,0.5);
+    border-color: rgba(246,157,60,0.5);
+}
+
+
+.hola{
+
+    position: absolute;
+    background: rgba(255,250,240,0.9);
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding-top: 10px;
+    width: 15%;
+    margin-left: 83%;
+    display: none;
+    color: black;
+    padding-right: 20px;
+    font-family: 'Yu Gothic UI';
+    font-size: 17px;
+    padding-bottom: 0px;
+    z-index: 100;
+}
+
+.hola ul{
+    flex-direction: column;
+    list-style: none;
+    color: black;
+}
+.hola li a{
+    text-decoration: none;
+    color: #F4A460;
+
+
+}
+.hola li a:hover{
+    color: rgba(246,157,60,0.5);
+}
+
+#out:hover ~.hola{
+    margin-left: 83%;
+    display: block;
+}
+
+#hola:hover{
+    display: block;
+    margin-left: 83%;
+}
+
+@media (max-width: 768px) {
+    .hola {
+        width: 30%;
+    }
+
+    #out:hover ~ .hola {
+        margin-left: 67%;
+    }
+
+    #hola:hover {
+        margin-left: 67%;
+
+    }
+}

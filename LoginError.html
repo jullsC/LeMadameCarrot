@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Le Madame Carrot. Panadería online</title>
+    <link rel="icon" href="logo1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    section{
+        background-image: url("login.jpg");
+        background-size: 100% 100%;
+        height: 800px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #boton{
+        margin-top: 20px;
+        background-color: rgb(246,157,60);
+        border-color: #f69d3c;
+    }
+    #boton:hover{
+        background-color: rgba(246,157,60,0.5);
+        border-color: rgba(246,157,60,0.5);
+    }
+    #boton1{
+        margin-top: 20px;
+        background-color: rgb(246,157,60);
+        border-color: #f69d3c;
+    }
+    #boton1:hover{
+        background-color: rgba(246,157,60,0.5);
+        border-color: rgba(246,157,60,0.5);
+    }
+
+</style>
+</head>
+<body style="margin: 0; padding: 0">
+
+<section class="container-fluid">
+
+    <div class="row" style="height: 150px">
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4"></div>
+        <div class="col-md-4 container" style="background-color: rgba(255,250,240,0.5); border-radius: 10%">
+
+            <div class="row" style="height: 120px; padding-bottom: 20px"><img src="name.png" height="104" width="258" style="margin: 10px auto;"></div>
+            <form action="iniciarSecion.php" method="post">
+            <div class="col-md-12"><input type="email" placeholder="Correo Electrónico" required class="form-control" id="correo" name="correo" style="border: 2px solid red"></div>
+            <div class="col-md-12"><input type="password" placeholder="Contraseña"  required class="form-control" style="margin-top: 10px;border: 2px solid red;" id="pass" name="pass" ></div>
+            <div class="col-md-12"><input type="submit" value="Iniciar Sesión" class="btn btn-warning btn-block" id="boton"></div>
+            </form>
+            <div class="row" style="height: 100px">
+                <div class="col-md-8 col-8" style="padding-top: 25px; alignment: right" align="right"><label>¿Aún no tienes una cuenta?</label></div>
+                <a href="registro.html"><div  class="col-md-4 col-4" style="padding-top: 25px; color: #F4A460"><u><b>Registrarse</b></u></div></a>
+                <div class="col-md-12" style="color: red; text-align: center">Correo o contraseña incorrectas</div>
+            </div>
+
+
+        </div>
+        <div class="col-md-4 col-md-offset-4"></div>
+    </div>
+
+
+    </div>
+
+</section>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+</body>
+</html>

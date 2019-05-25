@@ -1,0 +1,146 @@
+CREATE TABLE cliente(
+id_cliente INT(5) NOT NULL,
+  correo VARCHAR(30) NOT NULL,
+  pass VARCHAR(10) NOT NULL,
+  nombre VARCHAR(50) NOT NULL,
+  apellido VARCHAR(50) NOT NULL,
+  direccion VARCHAR(50) NOT NULL,
+  PRIMARY KEY(id_cliente),
+  UNIQUE KEY(correo)
+);
+
+CREATE TABLE categoria(
+id_categoria INT(5) NOT NULL,
+    nombre VARCHAR(30) NOT NULL,
+    descripcion VARCHAR(100),
+    PRIMARY KEY(id_categoria),
+    UNIQUE KEY(nombre)
+);
+
+insert into categoria VALUES(1,'Pan Dulce','Pan de trigo dulce de diferentes tipos y sabores, de la mas alta categoria');
+insert into categoria values(2,'Pan Blanco','Pan elaborado con harina de trigo refinada sin azucar');
+insert into categoria values(3,'Reposteria','Conforma una gran variedad de postres que van desde pasteles, pays, cupcakes,etc');
+
+
+CREATE TABLE productos(
+id_producto INT(5) NOT NULL,
+    categoria INT(5) NOT NULL,
+    nombre VARCHAR(80) NOT NULL,
+    precio INT(5) NOT NULL,
+    url_img VARCHAR(100),
+    PRIMARY KEY(id_producto),
+    FOREIGN KEY(categoria) REFERENCES categoria(id_categoria)
+);
+
+
+
+insert into productos values(001,1,'Rebanada de mantequilla',8,'');
+insert into productos values(002,1,'Rebanada de coco',10, '');
+insert into productos values(003,1,'Rebanada de nuez',15,'');
+insert into productos values(004,1,'Multi de chocolate',12,'');
+insert into productos values(005,1,'Rebanada frambuesa con chocolate',15,'');
+insert into productos values(006,1,'Muffin de almendra',10,'');
+insert into productos values(007,1,'Muffin de elote',15,'');
+insert into productos values(008,1,'Muffin de nuez',15,'');
+insert into productos values(009,1,'Muffin de naranja',14,'');
+insert into productos values(010,1,'Mantecada',10,'');
+insert into productos values(011,1,'Espejo',12,'');
+insert into productos values(012,1,'Galleta de nuez',15,'');
+insert into productos values(013,1,'Polvoron de anis',12,'');
+insert into productos values(014,1,'Polvoron de chocolate',10,'');
+insert into productos values(015,1,'Polvoron de fresa',10,'');
+insert into productos values(016,1,'Dona granillo de chocolate',15,'');
+insert into productos values(017,1,'Dona de maple',15,'');
+insert into productos values(018,1,'Dona de almendra',12,'');
+insert into productos values(019,1,'Choux con chocolate',16,'');
+insert into productos values(020,1,'Dona de moka',15,'');
+insert into productos values(021,1,'Concha de vainilla',8,'');
+insert into productos values(022,1,'Buñuelo',10,'');
+insert into productos values(023,1,'Bisquet',15,'');
+insert into productos values(024,1,'Glaseados',12,'');
+insert into productos values(025,1,'Puerquito de piloncillo',15,'');
+
+insert into productos values(026,3,'Pastel de zanahoria',250,'');
+insert into productos values(027,3,'Pastel capuchino',200,'');
+insert into productos values(028,3,'Pastel de rompope philadelphia',300,'');
+insert into productos values(029,3,'Pastelde 3 chocolates',290,'');
+insert into productos values(030,3,'Pastel de moka',250,'');
+insert into productos values(031,3,'Pastel de 3 leches',290,'');
+insert into productos values(032,3,'Tarta de nuez',200,'');
+insert into productos values(033,3,'Pay de platano',190,'');
+insert into productos values(034,3,'Pay frutos del bosque',250,'');
+insert into productos values(035,3,'Tarta de manzana',190,'');
+insert into productos values(036,3,'Pay de limon',250,'');
+insert into productos values(037,3,'Pay de queso',300,'');
+
+insert into productos values(038,2,'Bolillo',8,'bolillo.jpg');
+insert into productos values(039,2,'Pan blanco bimbo',15,'bimbo.png');
+insert into productos values(040,2,'Pan integral',10,'panintegral.jpg');
+insert into productos values(041,2,'Pan integral bimbo',20,'bimbo1.png');
+insert into productos values(042,2,'Telera',8,'telera.jpg');
+insert into productos values(043,2,'Pan frances clasico',15,'panfrances.png');
+
+
+
+CREATE TABLE carrito(
+id_cliente INT(5) NOT NULL,
+    id_producto INT(5) NOT NULL,
+    cantidad INT(4) NOT NULL,
+    total INT(5) NOT NULL,
+    PRIMARY KEY(id_cliente,id_producto),
+    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
+    FOREIGN KEY(id_producto) REFERENCES productos(id_productos)
+);
+
+CREATE TABLE compras(
+id_compra INT(12) NOT NULL,
+    id_cliente INT(5) NOT NULL,
+    fecha DATE,
+    total INT(6),
+    referencia VARCHAR(12),
+    PRIMARY KEY(id_compra),
+    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente)
+);
+
+INSERT INTO cliente VALUES(1,'mcjurie@hotmail.com','soybatman4','Julieta','Cedillo','desierto de kabir 1917');
+INSERT INTO cliente VALUES(2,'a.aparicio@hotmail.com','Peluchin1','Arely','Aparicio','en algun lugar');
+INSERT INTO compras VALUES(0,1,CURDATE(),16,CONCAT(CURDATE()+0,1111));
+
+
+update productos set url_img='rebanada.jpg' where id_producto=001;
+update productos set url_img='rebanadacoco.jpg' where id_producto=002;
+update productos set url_img='rebanadanuez.jpg' where id_producto=003;
+update productos set url_img='multi.jpg' where id_producto=004;
+update productos set url_img='frambuesachoco.jpg' where id_producto=005;
+update productos set url_img='almendra.jpg' where id_producto=006;
+update productos set url_img='muffin.jpg' where id_producto=007;
+update productos set url_img='muffin1.jpg' where id_producto=008;
+update productos set url_img='muffin2.jpg' where id_producto=009;
+update productos set url_img='mantecada.jpg' where id_producto=010;
+update productos set url_img='espejo.jpg' where id_producto=011;
+update productos set url_img='galleta1.jpg' where id_producto=012;
+update productos set url_img='polvoron.jpg' where id_producto=013;
+update productos set url_img='polvoron1.jpg' where id_producto=014;
+update productos set url_img='polvoron2.jpg' where id_producto=015;
+update productos set url_img='dona1.jpg' where id_producto=016;
+update productos set url_img='dona2.jpg' where id_producto=017;
+update productos set url_img='dona3.jpg' where id_producto=018;
+update productos set url_img='dona4.jpg' where id_producto=019;
+update productos set url_img='dona5.jpg' where id_producto=020;
+update productos set url_img='concha.jpg' where id_producto=021;
+update productos set url_img='bunuelo.jpg' where id_producto=022;
+update productos set url_img='bisquet.jpg' where id_producto=023;
+update productos set url_img='glaseados.jpg' where id_producto=024;
+update productos set url_img='porky.jpg' where id_producto=025;
+update productos set url_img='zanaoria.png' where id_producto=026;
+update productos set url_img='pastelcapuchino.png' where id_producto=027;
+update productos set url_img='rompope%7D.png' where id_producto=028;
+update productos set url_img='choco.png' where id_producto=029;
+update productos set url_img='pastel4.png' where id_producto=030;
+update productos set url_img='tresleches.png' where id_producto=031;
+update productos set url_img='tartanuez.png' where id_producto=032;
+update productos set url_img='payplatano.png' where id_producto=033;
+update productos set url_img='pay3.png' where id_producto=034;
+update productos set url_img='tartamanzana.png' where id_producto=035;
+update productos set url_img='paylimon.png' where id_producto=036;
+update productos set url_img='payqueso.png' where id_producto=037; 
