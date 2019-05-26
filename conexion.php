@@ -6,7 +6,7 @@
  * Time: 23:28
  */
 
-$conexion=mysqli_connect("localhost", "root", "","panaderia");
+$conexion=mysqli_connect("localhost", "root", "Ilovemetal12","panaderia");
 
 
 
